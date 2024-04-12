@@ -1,13 +1,22 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import { Image } from 'astro:assets';
+import Logo from '../assets/cangrena_logo_plata.png';
 ---
 
-<Layout title="Cangrena 1994 - 2024">
-	<main>
-			<a href="/principal">Entrar</a>
-	</main>
-</Layout>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Cangrena 1994 - 2024</title>
+	</head>
+	<body class="bg-slate-900">
 
-<style>
-</style>
+		<div class="justify-self-center">
+			<Image src={Logo} alt="Logo Cangrena" width="800"/>
+		</div>
+		<div class="text-center">
+			<a href="/principal">Entrar</a>
+		</div>
+	</body>
+</html>
