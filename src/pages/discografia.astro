@@ -14,24 +14,33 @@ import Puas from '../assets/puas-removebg.png';
         </div>
         {
             discografia.map((disco) => (
-                <div >
-                    <p class="text-white">{disco.artist}</p>
-                    <p class="text-white">{disco.album}</p>
-                    <p class="text-white">{disco.year}</p>
-                    <Image src={disco.img} alt="Logo Cangrena" width="300" height="300"/>
+                <div class="grid grid-cols-4 gap-8">
+                    <div class="col-span-1">
+                        <Image src={disco.img} alt={"portada de " + disco.album  } width="400" height="400"/>
+                    </div>
+
+                    <div class="col-span-3">
+                    <p class="text-white">Titulo : {disco.album}</p> <br>
+                    <p class="text-white">Año de Lanzamiento : {disco.year}</p> <br>
+                    
                     <ol class="list-decimal">
+                        <p class="text-white">Canciones : </p> <br>
                         {
                             disco.songs.map((song) => (
                                 <li class="text-white">{song}</li>
                             ))
                         }
                     </ol>
+                    </div>
+                    
+
+                </div>
                     <br>
                     <div class="flex bg-repeat">
                         <Image src={Puas} alt="puas" width="300" height="300"/> <Image src={Puas} alt="puas" width="300" height="300"/><Image src={Puas} alt="puas" width="300" height="300"/> <Image src={Puas} alt="puas" width="280" height="300"/>
                     </div>
                     <br>
-                </div>
+
             ))
         }
     </div>
