@@ -9,6 +9,7 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 import  Cangrena  from '../assets/cangrena_logo_plata.png';
+import Puas from '../assets/puas.png';
 ---
 
 <!doctype html>
@@ -22,9 +23,19 @@ import  Cangrena  from '../assets/cangrena_logo_plata.png';
 		<title>{title}</title>
 	</head>
 	<body class="bg-gray-950 grid grid-cols-12 gap-4">
+
 		<div class="col-span-12 row-span-12 justify-self-center">
-			<Image src={Cangrena} alt="Logo Cangrena" />
+			<div class="flex bg-repeat">
+				<Image src={Puas} alt="puas" width="300" height="300"/> <Image src={Puas} alt="puas" width="300" height="300"/><Image src={Puas} alt="puas" width="300" height="300"/> <Image src={Puas} alt="puas" width="280" height="300"/>
+			</div>
+			<div class="flex justify-center items-center">
+				<Image src={Cangrena} alt="Logo Cangrena" width="500"/>
+			</div>
+			<div class="flex bg-repeat">
+				<Image src={Puas} alt="puas" width="300" height="300"/> <Image src={Puas} alt="puas" width="300" height="300"/><Image src={Puas} alt="puas" width="300" height="300"/> <Image src={Puas} alt="puas" width="280" height="300"/>
+			</div>
 		</div>
+		
 		<div class="col-span-1">
 			<Navbar />
 		</div>
