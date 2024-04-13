@@ -14,7 +14,7 @@ import Puas from '../assets/puas-removebg.png';
         </div>
         {
             discografia.map((disco) => (
-                <div class="grid grid-cols-4 gap-8">
+                <div class="grid grid-cols-4 gap-8 p-8">
                     <div class="col-span-1">
                         <Image src={disco.img} alt={"portada de " + disco.album  } width="400" height="400"/>
                     </div>
@@ -27,7 +27,7 @@ import Puas from '../assets/puas-removebg.png';
                         <p class="text-white">Canciones : </p> <br>
                         {
                             disco.songs.map((song) => (
-                                <li class="text-white">{song}</li>
+                                <li class="text-white font-cinzel">{song}</li>
                             ))
                         }
                     </ol>
