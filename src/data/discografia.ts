@@ -1,5 +1,3 @@
-//hacer un json con los datos de los albnumes de la discografia
-
 const discografia = [
     
     {
