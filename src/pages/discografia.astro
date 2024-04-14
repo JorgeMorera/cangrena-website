@@ -14,9 +14,9 @@ import Puas from '../assets/puas-removebg.png';
         </div>
         {
             discografia.map((disco) => (
-                <div class="grid grid-cols-4 gap-8 p-8">
+                <div class="sm:grid grid-cols-1 md:grid-cols-4 gap-8 p-8">
                     <div class="col-span-1">
-                        <Image src={disco.img} alt={"portada de " + disco.album  } width="400" height="400"/>
+                        <Image src={disco.img} alt={"portada de " + disco.album  } width="400" height="400" ></Image>
                     </div>
 
                     <div class="col-span-3">
