@@ -11,6 +11,8 @@ import { Image } from 'astro:assets';
 import  Cangrena  from '../assets/cangrena_logo_plata.png';
 import Puas from '../assets/puas2.png';
 
+const fechas = await Astro.glob('../pages/content/fechas/*.md');
+
 //fonts
 
 import '@fontsource/unifrakturcook';
@@ -48,8 +50,19 @@ import '@fontsource/nosifer';
 		<div id="navbar" class="col-span-1">
 			<Navbar />
 		</div>
-		<div class="col-span-11">
+		<div class="col-span-9">
 			<slot />
+		</div>
+		<div class="col-span-1 mx-2">
+			<span class="text-white font-cinzel font-bold">Proximas Fechas</span>
+			{
+				fechas.reverse().map((fecha) => (
+					<div><a href={fecha.url}>{fecha.frontmatter.bombre}
+						<p class="text-white text-sm">{fecha.frontmatter.nombre}</p> 
+						<img src={fecha.frontmatter.imagen} alt={fecha.frontmatter.nombre} width="200"><br><br>
+					</a></div>
+				))
+			}
 		</div>
 		<div class="col-span-12 row-span-12 justify-self-center ">
 			<div>

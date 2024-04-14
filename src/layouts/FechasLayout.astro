@@ -1,0 +1,81 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+const { frontmatter } = Astro.props;
+
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import  Cangrena  from '../assets/cangrena_logo_plata.png';
+import Puas from '../assets/puas2.png';
+
+//fonts
+
+import '@fontsource/unifrakturcook';
+import '@fontsource/cinzel-decorative';
+import '@fontsource/unifrakturmaguntia';
+import '@fontsource/creepster';
+import '@fontsource/girassol';
+import '@fontsource/nosifer';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-stone-950 grid grid-cols-12 gap-4">
+
+		<div id="banner" class="col-span-12 row-span-12 justify-self-center">
+			<div class="flex bg-repeat">
+				<Image src={Puas} alt="puas" width="300" height="300"/> <Image src={Puas} alt="puas" width="300" height="300"/><Image src={Puas} alt="puas" width="300" height="300"/> <Image src={Puas} alt="puas" width="280" height="300"/>
+			</div>
+			<div class="flex justify-center items-center">
+				<Image src={Cangrena} alt="Logo Cangrena" width="500"/>
+			</div>
+			<div class="flex bg-repeat">
+				<Image src={Puas} alt="puas" width="300" height="300"/> <Image src={Puas} alt="puas" width="300" height="300"/><Image src={Puas} alt="puas" width="300" height="300"/> <Image src={Puas} alt="puas" width="280" height="300"/>
+			</div>
+		</div>
+		
+		<div id="navbar" class="col-span-1">
+			<Navbar />
+		</div>
+		<div class="col-span-11 px-14 text-white">
+      <h1>{frontmatter.nombre}</h1><br><br>
+      <img src={frontmatter.imagen} alt={frontmatter.nombre}/>
+			<slot />
+		</div>
+		<div class="col-span-12 row-span-12 justify-self-center ">
+			<div>
+				<Footer />
+			</div>
+		</div>
+	</body>
+</html>
+
+<style>
+	:root {
+		body {
+			background-image: url("../assets/sangre.png");
+		}
+
+		p{
+			font-family: 'Cinzel Decorative';
+			font-size: 18px;
+		}
+		h1{
+			font-family: 'Cinzel Decorative';
+			font-size: 50px;
+			font-weight: 900;
+		}
+	}
+</style>
