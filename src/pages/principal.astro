@@ -13,11 +13,13 @@ const posts = await Astro.glob('../pages/content/noticias/*.md');
 
 
     <div class="flex justify-center items-center px-3">
-        <div class="p-8">
+        <div class="px-10">
             <ul>
                 {posts.reverse().map(post => (
-                    <li><a href={post.url}><span class="text-white">{post.frontmatter.title}</span></a></li>
-                    
+                    <li><a href={post.url}><h2 class="text-white text-xl text-bold">{post.frontmatter.title}</h2></a></li>
+                    <li><span class="text-white">{post.frontmatter.description}</span></li>
+                    <li><a href={post.url}>{post.frontmatter.tittle} <span class="text-amber-400">Leer mas</span></a></li>
+                    <br>
                 ))}
             </ul>
 

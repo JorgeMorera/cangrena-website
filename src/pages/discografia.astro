@@ -30,7 +30,13 @@ import Puas from '../assets/puas-removebg.png';
                                 <li class="text-white font-cinzel">{song}</li>
                             ))
                         }
-                    </ol>
+                    </ol><br>
+                    <p class="text-white">Tocaron en esta grabación :</p> <br>
+                    {
+                      disco.lineup.map((lineup) => (
+                        <p class="text-white font-cinzel">{lineup}</p>
+                      ))
+                    }
                     </div>
                     
 

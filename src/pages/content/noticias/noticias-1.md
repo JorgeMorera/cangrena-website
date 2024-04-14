@@ -2,7 +2,7 @@
 layout: ../../../layouts/NoticiasLayout.astro
 title: Marica Juju
 author: Pedro Perez
-description: todos se pueden ir a la verga
+description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe aliquam autem odit quasi porro molestiae magnam minima, unde nam ab, sunt dolor atque velit? Veniam suscipit eaque vel ad.
 ---
 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe aliquam autem odit quasi porro molestiae magnam minima, unde nam ab, sunt dolor atque velit? Veniam suscipit eaque vel ad.
 Molestiae laborum totam ex veritatis? Nostrum vel maxime, voluptate est harum, esse debitis aliquid, eum reprehenderit culpa dolorem blanditiis odit quis quisquam necessitatibus a. Aliquid facilis magni blanditiis odit inventore!
