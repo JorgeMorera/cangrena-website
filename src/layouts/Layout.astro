@@ -33,7 +33,7 @@ import '@fontsource/nosifer';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-stone-950 grid grid-cols-12 gap-4">
+	<body class="bg-stone-950 sm:grid grid-cols-1 md:grid-cols-12 gap-4">
 
 		<div id="banner" class="col-span-12 row-span-12 justify-self-center">
 			<div class="flex bg-repeat">
@@ -50,10 +50,10 @@ import '@fontsource/nosifer';
 		<div id="navbar" class="col-span-1">
 			<Navbar />
 		</div>
-		<div class="col-span-9">
+		<div class="col-start-2 col-end-11">
 			<slot />
 		</div>
-		<div class="col-span-1 mx-2">
+		<div class="col-start-11 col-end-12 mx-2">
 			<span class="text-white font-cinzel font-bold">Proximas Fechas</span>
 			{
 				fechas.reverse().map((fecha) => (
@@ -77,16 +77,7 @@ import '@fontsource/nosifer';
 		body {
 			background-image: url("../assets/sangre.png");
 		}
-
-		p{
-			font-family: 'Cinzel Decorative';
-			font-size: 18px;
-		}
-		h1{
-			font-family: 'Cinzel Decorative';
-			font-size: 50px;
-			font-weight: 900;
-		}
+		
 	}
 </style>
 
