@@ -1,4 +1,5 @@
 ---
+import { SEO } from 'astro-seo';
 import { Image } from 'astro:assets';
 import Logo from '../assets/cangrena_logo_plata.png';
 import Puas from '../assets/puas2.png';
@@ -7,11 +8,24 @@ import '@fontsource/cinzel-decorative';
 
 <html lang="es">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Cangrena 1994 - 2024</title>
-	</head>
+		<SEO 
+			title="Cangrena 1994 - 2024"
+			description="Cangrena 1994 - 2024"
+			openGraph={{
+				basic: {
+          			title: "Unoficial Cangrena 1994 - 2024",
+          			type: "website",
+          			image: "../assets/cangrena_logo.png",
+        		}
+      		}}
+		/>
+		<title>{title}</title>
 	<body class="bg-stone-950">
 
 		<div class="mx-auto">
