@@ -7,6 +7,7 @@ const { title } = Astro.props;
 
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import { SEO } from 'astro-seo';
 import { Image } from 'astro:assets';
 import  Cangrena  from '../assets/cangrena_logo_plata.png';
 import Puas from '../assets/puas2.png';
@@ -30,7 +31,19 @@ import '@fontsource/nosifer';
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta name="generator" content={Astro.generator} />
+		<SEO 
+			title="Cangrena 1994 - 2024"
+			description="Cangrena 1994 - 2024"
+			openGraph={{
+				basic: {
+          			title: "Unoficial Cangrena 1994 - 2024",
+          			type: "website",
+          			image: "../assets/cangrena_logo.png",
+        		}
+      		}}
+		/>
 		<title>{title}</title>
 	</head>
 	<body class="bg-stone-950 sm:grid grid-cols-1 md:grid-cols-12 gap-4">
